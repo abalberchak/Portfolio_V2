@@ -1,0 +1,23 @@
+{
+  "name": "Portfolio_V2",
+  "authors": [
+    "Andrew Balberchak <abalberchak@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-route": "^1.6.3",
+    "angular-touch": "^1.6.3",
+    "bootstrap": "^3.3.7"
+  }
+}
