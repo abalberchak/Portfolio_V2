@@ -9,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<script src="https://use.fontawesome.com/476498d8eb.js"></script>
 	<script src="jquery/dist/jquery.min.js"></script>
+	<script src="jquery-ui/jquery-ui.min.js"></script>
 
 
 	<script src="angular/angular.min.js"></script>
@@ -24,11 +25,11 @@
 
 
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top navbar link">
+	<nav class="navbar navbar-default navbar-fixed-top navbar link" >
 		<div class="container" id="navigation">
 			<div class="navbar-header">
 
-				<button type="button" class="navbar-toggle hamburger" data-toggle="collapse" data-target="myNavBar"><i class="fa fa-bars" aria-hidden="true"></i>
+				<button type="button" class="navbar-toggle hamburger" data-toggle="collapse" data-target="#myNavBar"><i class="fa fa-bars" aria-hidden="true"></i>
 				</button>
 				<a class="navbar-brand" href="/">ANDREW BALBERCHAK</a>
 			</div>
@@ -36,11 +37,13 @@
       			<ul class="nav navbar-nav navbar-right">
 			        <li><a href="/">HOME</a></li>
 			        <li><a href="#!/about">ABOUT ME</a></li>
+
         			<li class="dropdown"><a href="#!/portfolio" data-toggle="dropdown" class="dropdown-toggle">PORTFOLIO <b class="caret"></b></a>
         			<ul class="dropdown-menu">
-			            <li><a href="#">Touch Face</a></li>
-			            <li><a href="#">Herbal-Fusion</a></li>
-			            <li><a href="#">Puzzle-Pic</a></li>
+			            <li><a href="#!/zenefitsTool">Zenefits Insurance Tool</a></li>
+			            <li><a href="#!/touchFace">Touch Face</a></li>
+			            <li><a href="#!/herbalFusion">Herbal-Fusion</a></li>
+			            <li><a href="#!/puzzlePic">Puzzle-Pic</a></li>
 			        </ul>
 			        </li>
 
@@ -49,6 +52,7 @@
     		</div>
 		</div>	
 	</nav>
+
 
 	<!-- <div class="dropdown">
         <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown <b class="caret"></b></a>
@@ -60,30 +64,37 @@
 
 
 	<div class="jumbotron text-center">
-  		<div class="fragmentWrapper" data-ng-view autoscroll="true" data-ng-controller="AppController">
+  		<div class="fragmentWrapper main" data-ng-view autoscroll="true" data-ng-controller="AppController">
 		
 		</div>
 	</div>
-	<h2>H</h2>
-	<h2>H</h2>
-	<h2>H</h2>
-	<h2>H</h2>
-	<h2>H</h2>
-	<h2>H</h2>
-	<h2>H</h2>
-	<h2>H</h2>
-	<h2>H</h2>
-	<h2>H</h2>
-	<h2>H</h2>
-	<h2>H</h2>
-	<h2>H</h2>
-	<h2>H</h2>
 
+	<div class="text-center">
+		<div id="contact" class="anchor">
+			<h2 class="content">CONTACT</h2>
+		</div>
 
-	<div id="contact">
-		<h2>Contact</h2>
+		<!-- <div class="content2">
+				<p>Need a Software Developer? Want to talk technology, the great outdoors, food, or electronic music? Feel free to drop me a line through any of the following channels!</p>			
+		</div> -->
+
+		<div id="icons">
+		
+			<a href="https://www.linkedin.com/in/abalberchak" target="_blank"><div id="linkedin" class="social_media"><i class="fa fa-linkedin" aria-hidden="true"></i><p>LinkedIn</p></div></a>
+
+			<a href="https://github.com/abalberchak" target="_blank"><div id="github" class="social_media"><i class="fa fa-github" aria-hidden="true"></i><p>Github</p></div></a>
+
+			<!-- <a href="#" target="_blank"><div id="soundcloud" class="social_media"><i class="fa fa-soundcloud" aria-hidden="true"></i><p>SoundCloud</p></div></a> -->
+
+			<a href="https://drive.google.com/file/d/0B0d3j9kjRccobndFTjlUU3RDZGRrdkdhM25nZGhxeHIxZHlz/view?usp=sharing" target="_blank"><div id="resume" class="social_media"><i class="fa fa-file-text" aria-hidden="true"></i><p>Resume</p></div></a>
+
+			<a href="mailto:abalberchak@gmail.com" target="_blank"><div id="email" class="social_media"><i class="fa fa-envelope-o" aria-hidden="true"></i><p>Email</p></div></a>
+		</div>
+
+		<div id="copyrights">
+			<h5 class="center_text">© 2016 - 2017 Andrew Balberchak | Version 1.2 | Photo Credit: <a href="https://unsplash.com/" target="_blank">Unsplash</a></h5>
+		</div>
 	</div>
-
 
 
 

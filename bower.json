@@ -18,6 +18,7 @@
     "angular": "^1.6.3",
     "angular-route": "^1.6.3",
     "angular-touch": "^1.6.3",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "jquery-ui": "^1.12.1"
   }
 }
