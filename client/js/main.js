@@ -4,6 +4,42 @@ var app = angular.module('app', [
 	'ngRoute'
 ]);
 
+
+app.directive('hoverDirective', function () {
+    return {
+        restrict: 'AEC',
+        link: function(scope, elem, attrs) {
+        	$('.project').hover(function() {
+				$(".cover",this).addClass("cover_darken");
+				// $(".cover").css({"opacity": "0.75", "background-color": "black"}); 
+				$(this).switchClass("hidden_text", "show_text", 500);
+				console.log("I work");
+				
+			}, function() {
+				$(".cover", this).removeClass("cover_darken");
+				// $(".cover").css({"opacity": "0", "background-color": "black"});
+				$(this).switchClass("show_text", "hidden_text", 500);
+				
+			});
+        }
+    };
+});
+
+
+$('.project').hover(function() {
+		$(".cover",this).addClass("cover_darken");
+		// $(".cover").css({"opacity": "0.75", "background-color": "black"}); 
+		$(this).switchClass("hidden_text", "show_text", 500);
+		console.log("I work");
+		
+	}, function() {
+		$(".cover", this).removeClass("cover_darken");
+		// $(".cover").css({"opacity": "0", "background-color": "black"});
+		$(this).switchClass("show_text", "hidden_text", 500);
+		
+	});
+
+
 app.config(function ($routeProvider) {
 	$routeProvider
 		.when('/', {
@@ -53,6 +89,7 @@ app.controller('AppController', function($scope) {
 });
 
 
+
 // JQuery Top Shrinking Navigation
 
 $(document).ready(function(){
@@ -81,7 +118,7 @@ $(document).ready(function(){
 
 // Testing for SideScrolling on Partial Click:
     // var scrollSide = function (selector) {
-    // 	jQuery('html, body').animate({
+    // 	jQuery('html, body').animaste({
     // 	scrollLeft: jQuery(selector).offset().left
     // 	}, 800);
     // }
@@ -90,6 +127,16 @@ $(document).ready(function(){
     // 	scrollSide: (jQuery(this).attr("href"));
     // 	return false;
     // });
+
+    // Close Open Dropdown by Clicking Outside of Menu:
+    $(document).click(function (event) {
+	    var clickover = $(event.target);
+	    var $navbar = $(".navbar-collapse");               
+	    var _opened = $navbar.hasClass("in");
+	    if (_opened === true && !clickover.hasClass("navbar-toggle")) {      
+	        $navbar.collapse('hide');
+	    }
+	});
 
 
 	// JQuery for floating Contact Icons:
@@ -104,6 +151,7 @@ $(document).ready(function(){
 	
 
 	// JQuery for Darken on Hover Portfolio
+
 	$('.project').hover(function() {
 		$(".cover",this).addClass("cover_darken");
 		// $(".cover").css({"opacity": "0.75", "background-color": "black"}); 
@@ -117,23 +165,16 @@ $(document).ready(function(){
 		
 	});
 
-	// Modal:
-	$(function() {
-    //----- OPEN
-    $('[data-popup-open]').on('click', function(e)  {
-        var targeted_popup_class = jQuery(this).attr('data-popup-open');
-        $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
- 
-        e.preventDefault();
-    });
- 
-    //----- CLOSE
-    $('[data-popup-close]').on('click', function(e)  {
-        var targeted_popup_class = jQuery(this).attr('data-popup-close');
-        $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
- 
-        e.preventDefault();
-    	});
-	});
+
+
+	// TEST
+
+		
+
+
+
 
 });
+
+
+
