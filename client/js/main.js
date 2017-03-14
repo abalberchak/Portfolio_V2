@@ -67,20 +67,6 @@ $(document).ready(function(){
 
 
 	// JQuery for Page Scroll Animation:
-	// $(function() {
-	// 	$('a[href*="#"]:not([href="#"])').click(function() {
-	// 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	// 			var target = $(this.hash);
-	//   			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	//       		if (target.length) {
-	//         		$('html, body').animate({
-	//           		scrollTop: target.offset().top
-	//         		}, 1000);
-	//         		return false;
-	//       		}
-	// 		}
-	// 		});
-	// });
 
 	var scrollWin = function (selector) {
     	jQuery('html, body').animate({
@@ -88,15 +74,22 @@ $(document).ready(function(){
     	}, 800);
     }
     
-    jQuery("a[href*='#']:not(a[href^='#!/'])").click(function(e) {
+    $("a[href*='#']:not(a[href^='#!/'])").click(function(e) {
     	scrollWin (jQuery(this).attr("href"));
     	return false;
-
-    // Works Below for Contact:
-    // jQuery("[href='#contact']").click(function(e) {
-    // 	scrollWin (jQuery(this).attr("href"));
-    // 	return false;
     });
+
+// Testing for SideScrolling on Partial Click:
+    // var scrollSide = function (selector) {
+    // 	jQuery('html, body').animate({
+    // 	scrollLeft: jQuery(selector).offset().left
+    // 	}, 800);
+    // }
+
+    // $("a[href='#!/'])").click(function(e) {
+    // 	scrollSide: (jQuery(this).attr("href"));
+    // 	return false;
+    // });
 
 
 	// JQuery for floating Contact Icons:

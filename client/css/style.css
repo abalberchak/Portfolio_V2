@@ -123,8 +123,17 @@ p {
 	line-height: 180%;
 }
 
+#hamburger-btn:focus {
+	background-color: #242424;
+	color: #00ffff;
+}
+
 ul .dropdown-menu {
 	background-color: #242424;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+	color: #ffffff;
 }
 
 a .dropdown-menu:hover {
@@ -133,6 +142,11 @@ a .dropdown-menu:hover {
 
 ul .dropdown-menu a:hover {
 	background-color: #666666;
+}
+
+ul .dropdown-menu a:focus {
+	background-color: #242424;
+	color: #ffffff;
 }
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
