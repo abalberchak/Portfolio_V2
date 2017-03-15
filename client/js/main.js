@@ -90,9 +90,17 @@ app.controller('AppController', function($scope) {
 
 
 
-// JQuery Top Shrinking Navigation
+
+// JQuery
+
 
 $(document).ready(function(){
+
+	$(window).on('load', function(){
+		$('#loading').delay(400).fadeOut(500);
+	});
+
+	// Top Shrinking Navigation
 	$(window).scroll(function() { // check if scroll event happened
 		if ($(document).scrollTop() > 40) { // check if user scrolled more than 50 from top of the browser window
   			$(".navbar-default").css({"opacity": "0.90", "padding": " 5px 0px 5px"}); 
@@ -116,7 +124,7 @@ $(document).ready(function(){
     	return false;
     });
 
-// Testing for SideScrolling on Partial Click:
+	// Testing for SideScrolling on Partial Click:
     // var scrollSide = function (selector) {
     // 	jQuery('html, body').animaste({
     // 	scrollLeft: jQuery(selector).offset().left
@@ -127,6 +135,7 @@ $(document).ready(function(){
     // 	scrollSide: (jQuery(this).attr("href"));
     // 	return false;
     // });
+
 
     // Close Open Dropdown by Clicking Outside of Menu:
     $(document).click(function (event) {
