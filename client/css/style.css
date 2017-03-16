@@ -317,11 +317,11 @@ ul .dropdown-menu a:focus {
 }
 
 
-#loading {
+.loading {
    background-color: #fff;
    left: 0;
    top: 0;
-   padding-top: 25%;
+   padding-top: 20%;
    width: 100%;
    height: 100%;
    position: fixed;
