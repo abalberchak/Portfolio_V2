@@ -5,7 +5,7 @@ var app = angular.module('app', [
 ]);
 
 
-app.directive('hoverDirective', function () {
+app.directive('hoverDirective', function() {
     return {
         restrict: 'AEC',
         link: function(scope, elem, attrs) {
@@ -25,23 +25,65 @@ app.directive('hoverDirective', function () {
     };
 });
 
-app.directive('loadingIcon', function () {
+// JQuery for Page Scroll Animation:
+app.directive('scrollDirective', function() {
 	return {
-        restrict: 'E',
-        template:"<h1 ng-if='isRouteLoading'>Loading...</h1>",
-	    link:function(scope, elem, attrs) {
-	      scope.isRouteLoading = false;
-
-	      $rootScope.$on('$routeChangeStart', function(){
-	        scope.isRouteLoading = true;
-	      });
-
-	      $rootScope.$on('$routeChangeSuccess', function(){
-	        scope.isRouteLoading = false;
-	      });
+		restrict: 'AEC',
+		link: function(scope, elem, attrs) {
+			var scrollWin = function (selector) {
+	    	jQuery('html, body').animate({
+	    	scrollTop: jQuery(selector).offset().top
+	    	}, 800);
 	    }
-    };
+	    
+	    $("a[href*='#']:not(a[href^='#!/'])").click(function(e) {
+	    	scrollWin (jQuery(this).attr("href"));
+	    	return false;
+	    });
+		}
+	}
 });
+
+app.directive('loadingDirective', function($http) {
+	return {
+		restrict: 'A',
+		link: function (scope, elem, attrs) {
+			scope.isLoading = function () {
+                return $http.pendingRequests.length > 0;
+            };
+
+            scope.$watch(scope.isLoading, function (v)
+            {
+                if(v){
+                    $('.loading2').show();
+                }else{
+                    $('.loading2').delay(400).fadeOut(500);
+                }
+            });
+		}
+	}
+})
+
+
+
+
+// var routeLoadingIndicator = function($rootScope){
+//   return {
+//     restrict:'E',
+//     template:"<h1 ng-if='isRouteLoading'>Loading...</h1>",
+//     link:function(scope, elem, attrs){
+//       scope.isRouteLoading = false;
+
+//       $rootScope.$on('$routeChangeStart', function(){
+//         scope.isRouteLoading = true;
+//       });
+
+//       $rootScope.$on('$routeChangeSuccess', function(){
+//         scope.isRouteLoading = false;
+//       });
+//     }
+//   };
+// };
 
 
 $('.project').hover(function() {
@@ -114,6 +156,7 @@ app.controller('AppController', function($scope) {
 
 $(document).ready(function(){
 
+	//Loading Screen
 	$(window).on('load', function(){
 		$('.loading').delay(400).fadeOut(500);
 	});
@@ -131,16 +174,16 @@ $(document).ready(function(){
 
 	// JQuery for Page Scroll Animation:
 
-	var scrollWin = function (selector) {
-    	jQuery('html, body').animate({
-    	scrollTop: jQuery(selector).offset().top
-    	}, 800);
-    }
+	// var scrollWin = function (selector) {
+ //    	jQuery('html, body').animate({
+ //    	scrollTop: jQuery(selector).offset().top
+ //    	}, 800);
+ //    }
     
-    $("a[href*='#']:not(a[href^='#!/'])").click(function(e) {
-    	scrollWin (jQuery(this).attr("href"));
-    	return false;
-    });
+ //    $("a[href*='#']:not(a[href^='#!/'])").click(function(e) {
+ //    	scrollWin (jQuery(this).attr("href"));
+ //    	return false;
+ //    });
 
 	// Testing for SideScrolling on Partial Click:
     // var scrollSide = function (selector) {

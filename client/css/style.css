@@ -21,6 +21,7 @@ body {
 	letter-spacing: 2px;
 	font-weight: normal;
 	overflow-x: hidden;
+	/*background-color: #f2f2f2;*/
 }
 
 
@@ -72,10 +73,6 @@ p {
 	opacity: 1.0;
 	padding: 15px 0px 15px;
 	border: none;
-	/*width: inherit;
-	left: 0;
-	position: fixed;
-	display: block;*/
 	transition: opacity 0.5s ease;
 	transition: padding 0.5s ease;
 	z-index:900;
@@ -94,22 +91,39 @@ p {
 
 .navbar-default .navbar-brand:hover {
 	outline: none;
-	color: #00ffff;
+	color: #64f6eb;
 }
+
 
 .navbar-default .navbar-nav li a {
 	color: #ffffff;
-	transition: color 0.6s ease;
+	transition: 0.6s ease;
+	padding-bottom: 5px;
 }
 
 .navbar-default .navbar-nav li a:focus {
 	outline: none;
-	color: #00ffff;
+	color: #64f6eb;
+	border-bottom: 1px solid #ffffff;
+    box-shadow: 0 1px 0 0 #ffffff;
 }
+
+
+
+@media only screen and (max-device-width: 480px) {
+	.navbar-default .navbar-nav li a:focus {
+		outline: none;
+		color: #64f6eb;
+		border-bottom: none;
+	    box-shadow: none;
+	    padding-bottom: 0;
+	}
+}
+
 
 .navbar-default .navbar-nav li a:hover {
 	outline: none;
-	color: #00ffff;
+	color: #64f6eb;
 }
 
 
@@ -123,9 +137,15 @@ p {
 	line-height: 180%;
 }
 
+#hamburger-btn {
+	border: none;
+	font-size: 1.5em !important;
+	margin-top: 0;
+}
+
 #hamburger-btn:focus {
 	background-color: #242424;
-	color: #00ffff;
+	color: #64f6eb;
 }
 
 ul .dropdown-menu {
@@ -150,7 +170,7 @@ ul .dropdown-menu a:focus {
 }
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-	color: #00ffff;
+	color: #64f6eb;
 	background-color: #242424;
 }
 
@@ -169,7 +189,7 @@ ul .dropdown-menu a:focus {
 }
 
 #icons a:hover {
-	color: #00ffff;
+	color: #64f6eb;
 }
 
 /*End Bootstrap Override*/
@@ -178,7 +198,7 @@ ul .dropdown-menu a:focus {
 
 #cover {
 	background-image: url('../img/cfplr9zgnak-alberto-restifo.jpg');
-	position: fixed;
+	position: relative;
 	background-position: center center;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -193,18 +213,31 @@ ul .dropdown-menu a:focus {
     left: 0;
     top: 0;
     background-position: center;
-    position: relative;
     padding: 0;
-    border-top: 50px;
     z-index: 1;
-
 }
+
 
 .backdrop {
-	min-height: 600px;
 	height: 700px;
 	width: 100%;
+	padding: 0;
+	background-size: auto;
 }
+
+
+/*#quote-box {
+	margin: auto;
+	height: 100px;
+	width: 100%;
+	background-color: #242424;
+	opacity: 0.5;
+	z-index: 10;
+}
+
+#quote-box-wrapper {
+	padding-top: 15%;
+}*/
 
 .title {
 	margin-left: 50px;
@@ -219,7 +252,7 @@ ul .dropdown-menu a:focus {
 
 
 .content2 {
-	margin: 50px;
+	margin: 0px 50px;
 	letter-spacing: 0px;
 	text-align: center;
 }
@@ -287,6 +320,7 @@ ul .dropdown-menu a:focus {
 	/*width: 20%;*/
 	/*background-color: #000000;*/
 }
+
 #banner {
 	text-align: center;
 	padding: 25px;
@@ -311,7 +345,7 @@ ul .dropdown-menu a:focus {
 	height: 0;
 	border-left: 40px solid transparent;
 	border-right: 40px solid transparent;
-	border-top: 60px solid #00ffff;
+	border-top: 60px solid #64f6eb;
 	/*padding-top: 60px;*/
 
 }
@@ -330,6 +364,14 @@ ul .dropdown-menu a:focus {
 }
 
 
+.fa-cog {
+	font-size: 1em !important;
+}
+
+#loading-bar .bar {
+  position: relative;
+}
+
 #icons {
 	background-color: #ffffff;
 	text-align: center;
@@ -346,7 +388,7 @@ ul .dropdown-menu a:focus {
 }*/
 
 #linkedin {
-	margin: 0px 20px;
+	margin: 0px 20px 10px;
 	width: 90px;
 	height: 90px;
 	border-radius: 50%;
@@ -360,7 +402,7 @@ ul .dropdown-menu a:focus {
 }
 
 #github {
-	margin: 0px 20px;
+	margin: 0px 20px 10px;
 	width: 90px;
 	height: 90px;
 	border-radius: 50%;
@@ -377,12 +419,12 @@ ul .dropdown-menu a:focus {
 	margin: 0px 20px;
 }
 
-.fa-long-arrow-right {
+.fa-external-link {
 	font-size: 2em !important;
 }
 
 #soundcloud {
-	margin: 0px 20px;
+	margin: 0px 20px 10px;
 	width: 90px;
 	height: 90px;
 	border-radius: 50%;
@@ -396,7 +438,7 @@ ul .dropdown-menu a:focus {
 }
 
 #resume {
-	margin: 0px 20px;
+	margin: 0px 20px 10px;
 	width: 90px;
 	height: 90px;
 	border-radius: 50%;
@@ -410,7 +452,7 @@ ul .dropdown-menu a:focus {
 }
 
 #email {
-	margin: 0px 20px;
+	margin: 0px 20px 10px;
 	width: 90px;
 	height: 90px;
 	border-radius: 50%;
@@ -436,7 +478,7 @@ ul .dropdown-menu a:focus {
 }
 
 #copyrights a:hover {
-	color: #00ffff;
+	color: #64f6eb;
 }
 
 .col-1 {
@@ -470,34 +512,6 @@ ul .dropdown-menu a:focus {
 	margin-bottom: 150px;
 }
 
-/*.project {
-	width: 220px;
-	height: 220px;
-	margin-left: auto;
-	margin-right: auto;
-	color: #80ffff;
-}*/
-
-/*.cover {
-	width: 220px;
-	height: 220px;
-	background-color: none;
-}*/
-
-/*.cover_darken {
-	width: 220px;
-	height: 220px;
-	background-color: black;
-	opacity: 0.65;
-	transition: opacity 0.8s ease;
-}*/
-
-/*.hidden_text p {
-	visibility: hidden;
-	opacity: 0;
-	transition: opacity 0.8s ease;
-	padding-top: 40%;
-}*/
 
 .project a {
 	max-width: 100%;
@@ -509,7 +523,7 @@ ul .dropdown-menu a:focus {
 	height: 220px;
 	margin-left: auto;
 	margin-right: auto;
-	color: #80ffff;
+	color: #64f6eb;
 	/*border: 1px solid black;
 	margin: 3px 0px;*/
 }
@@ -518,7 +532,7 @@ ul .dropdown-menu a:focus {
 .cover_darken {
 	width: 100%;
 	height: 100%;
-	background-color: black;
+	background-color: #242424;
 	opacity: 0.80;
 	transition: opacity 0.8s ease;
 }
@@ -533,9 +547,9 @@ ul .dropdown-menu a:focus {
 
 .show_text h4 {
 	visibility: visible;
-	opacity: 1;
-	transition: opacity 0.8s ease;
+	opacity: 1.0;
 }
+
 
 a {
 	text-decoration: none !important;
@@ -544,22 +558,61 @@ a {
 .insurance_trainer {
 	background: url('../img/zenefits_insurance_trainer.jpg') no-repeat center;
 	background-size: cover;
-	opacity: 1;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-bottom: 10px;
+}
+
+.insurance_trainer:hover {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .touchface {
 	background: url('../img/amazon_echo.jpg') no-repeat center;
 	background-size: cover;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-bottom: 10px;
+}
+
+.touchface:hover {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .herbalfusion {
 	background: url('../img/herbal_fusion.jpg') no-repeat center;
 	background-size: cover;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-bottom: 10px;
+}
+
+.herbalfusion:hover {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .puzzlepic {
 	background: url('../img/puzzle_pic.jpg') no-repeat center;
 	background-size: cover;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-bottom: 10px;
+}
+
+.puzzlepic:hover {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .upcoming {
@@ -641,18 +694,47 @@ a {
     text-decoration:none;
 }
 
-button {
-	border-radius: 5px;
-	background-color: #242424;
+.project_button {
+	border-radius: 20%/50%;
+    height: 3em;
+    width: 8em;
+    line-height: normal;
+    vertical-align: middle;
+    margin: 1em 1em auto;
+	background-color: transparent;
+	color: #242424;
+	opacity: 1.00;
+	transition: background-color 0.4s ease;
+	border: 1px solid #242424;
+}
+
+.project_button p {
+	visibility: hidden;
+}
+
+
+.project_button:hover {
+	background-color: #66CCCC;
 	color: #ffffff;
-	opacity: 0.85;
-	transition: color 0.6s ease;
-	border: 0px;
+	border: 1px solid #66CCCC;
+}
+
+.project_button:focus {
+	outline: none;
+}
+
+
+.project_content {
+	background-color: #d3d3d3;
+}
+
+.project_title {
+	color: #66CCCC;
 }
 
 button:hover {
 	opacity: 1.0;
-	color: #00ffff;
+	color: #64f6eb;
 }
 
 
@@ -1789,8 +1871,6 @@ stretchRight
 		-webkit-transform: scaleX(1);
 	}		
 }
-
-
 
 
 
