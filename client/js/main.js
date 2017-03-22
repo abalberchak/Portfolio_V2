@@ -36,7 +36,7 @@ app.directive('scrollDirective', function() {
 	    	}, 800);
 	    }
 	    
-	    $("a[href*='#']:not(a[href^='#!/'])").click(function(e) {
+	    $("a[href*='#']:not(a[href^='#/'])").click(function(e) {
 	    	scrollWin (jQuery(this).attr("href"));
 	    	return false;
 	    });
@@ -100,7 +100,8 @@ $('.project').hover(function() {
 	});
 
 
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider, $locationProvider) {
+	$locationProvider.hashPrefix('');
 	$routeProvider
 		.when('/', {
 			templateUrl: 'partials/home.html',
@@ -164,7 +165,7 @@ $(document).ready(function(){
 	// Top Shrinking Navigation
 	$(window).scroll(function() { // check if scroll event happened
 		if ($(document).scrollTop() > 40) { // check if user scrolled more than 50 from top of the browser window
-  			$(".navbar-default").css({"opacity": "0.90", "padding": " 5px 0px 5px"}); 
+  			$(".navbar-default").css({"opacity": "0.95", "padding": " 5px 0px 5px"}); 
 		} else {
   			$(".navbar-default").css({"opacity": "1.0", "padding": "15px 0px 15px"}); 
 		}
