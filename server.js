@@ -8,4 +8,6 @@ app.use(express.static(path.join(__dirname, './client')));
 app.use(express.static(path.join(__dirname, './bower_components')));
 app.use(bp.json());
 
-app.listen(8000, function() {});
+// app.listen(8000, function() {});
+
+app.listen(process.env.PORT || 5000);
