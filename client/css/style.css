@@ -63,6 +63,7 @@ p {
 
 
 /*Bootstrap Override:*/
+
 .navbar-brand {
 	font-size: 140%;
 }
@@ -118,6 +119,8 @@ p {
 	    box-shadow: none;
 	    padding-bottom: 0;
 	}
+
+
 }
 
 
