@@ -19,6 +19,8 @@
     "angular-route": "^1.6.3",
     "angular-touch": "^1.6.3",
     "bootstrap": "^3.3.7",
-    "jquery-ui": "^1.12.1"
+    "jquery-ui": "^1.12.1",
+    "Morphext": "^2.4.4",
+    "animate.css": "^3.5.2"
   }
 }

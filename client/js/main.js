@@ -44,25 +44,43 @@ app.directive('scrollDirective', function() {
 	}
 });
 
-app.directive('loadingDirective', function($http) {
+// app.directive('loadingDirective', function($http) {
+// 	return {
+// 		restrict: 'A',
+// 		link: function (scope, elem, attrs) {
+// 			scope.isLoading = function () {
+//                 return $http.pendingRequests.length > 0;
+//             };
+
+//             scope.$watch(scope.isLoading, function (v)
+//             {
+//                 if(v){
+//                     $('.loading2').show();
+//                 }else{
+//                     $('.loading2').delay(400).fadeOut(500);
+//                 }
+//             });
+// 		}
+// 	}
+// });
+
+
+app.directive('rotatingWordsDirective', function($http) {
 	return {
 		restrict: 'A',
 		link: function (scope, elem, attrs) {
-			scope.isLoading = function () {
-                return $http.pendingRequests.length > 0;
-            };
+			$("#js-rotating").Morphext({
+		        animation: "flipInX",
+		        // separator: "|", // Overrides default ","
+    			speed: 3500, // Overrides default 2000
+		    });
 
-            scope.$watch(scope.isLoading, function (v)
-            {
-                if(v){
-                    $('.loading2').show();
-                }else{
-                    $('.loading2').delay(400).fadeOut(500);
-                }
-            });
+
 		}
 	}
 })
+
+
 
 
 
@@ -240,7 +258,7 @@ $(document).ready(function(){
 
 
 	// TEST
-
+	
 		
 
 

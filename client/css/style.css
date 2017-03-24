@@ -224,6 +224,18 @@ ul .dropdown-menu a:focus {
     z-index: 1;
 }
 
+#quote-box-wrapper {
+	padding-top: 200px;
+	/*background-color: #242424;
+	opacity: 0.8;*/
+}
+
+#quote-box {
+	width: 60%;
+	margin: auto;
+	color: #242424;
+}
+
 
 .backdrop {
 	height: 700px;
