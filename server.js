@@ -10,4 +10,8 @@ app.use(bp.json());
 
 // app.listen(8000, function() {});
 
+app.get('*', function(req, res) {
+  res.sendfile('./client/index.html')
+})
+
 app.listen(process.env.PORT || 5000);
