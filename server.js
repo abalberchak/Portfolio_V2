@@ -11,7 +11,7 @@ app.use(bp.json());
 var http = require("http");
 setInterval(function() {
     http.get("https://andrew-balberchak.herokuapp.com");
-}, 300000); // every 5 minutes (300000)
+}, 1800000); // every 5 minutes (300000)
 
 
 // Required for Heroku to enable proper refresh with #! removal
