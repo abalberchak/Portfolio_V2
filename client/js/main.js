@@ -82,9 +82,6 @@ app.directive('rotatingWordsDirective', function($http) {
 
 
 
-
-
-
 // var routeLoadingIndicator = function($rootScope){
 //   return {
 //     restrict:'E',
