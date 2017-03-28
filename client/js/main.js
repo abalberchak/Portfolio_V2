@@ -72,7 +72,7 @@ app.directive('rotatingWordsDirective', function($http) {
 			$("#js-rotating").Morphext({
 		        animation: "flipInX",
 		        // separator: "|", // Overrides default ","
-    			speed: 2500, // Overrides default 2000
+    			speed: 3000, // Overrides default 2000
 		    });
 
 
