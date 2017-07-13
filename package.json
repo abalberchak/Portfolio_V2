@@ -15,7 +15,7 @@
     "mongoose": "^4.8.6"
   },
   "engines": {
-    "node": "6.9.1",
+    "node": "6.11.1",
     "npm": "4.1.1"
   },
   "devDependencies": {
