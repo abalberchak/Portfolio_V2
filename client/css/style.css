@@ -245,19 +245,6 @@ ul .dropdown-menu a:focus {
 }
 
 
-/*#quote-box {
-	margin: auto;
-	height: 100px;
-	width: 100%;
-	background-color: #242424;
-	opacity: 0.5;
-	z-index: 10;
-}
-
-#quote-box-wrapper {
-	padding-top: 15%;
-}*/
-
 .title {
 	margin-left: 50px;
 	text-align: center;
@@ -303,6 +290,13 @@ ul .dropdown-menu a:focus {
 .event_description {
 	font-family: 'Playfair Display', serif;
 	line-height: 200%;
+	background-color: #ffffff;
+	padding: 10px;
+}
+
+.role {
+	font-family: 'Raleway', sans-serif;
+	font-weight: normal;
 }
 
 .center_text {
