@@ -154,6 +154,11 @@ app.config(function ($routeProvider, $locationProvider) {
 			controller: 'AppController'
 		})
 
+		.when('/loudounClearMarketing', {
+			templateUrl: 'partials/loudounClearMarketing.html',
+			controller: 'AppController'
+		})
+
 		.otherwise({
 			redirectTo: '/'
 		});
