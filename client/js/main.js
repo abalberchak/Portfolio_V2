@@ -159,6 +159,11 @@ app.config(function ($routeProvider, $locationProvider) {
 			controller: 'AppController'
 		})
 
+		.when('/reactWeatherApp', {
+			templateUrl: 'partials/reactWeatherApp.html',
+			controller: 'AppController'
+		})
+
 		.otherwise({
 			redirectTo: '/'
 		});

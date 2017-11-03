@@ -3,6 +3,7 @@ var express = require('express'),
 	path = require('path'),
 	root = __dirname,
 	app = express();
+const PORT = process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, './client')));
 app.use(express.static(path.join(__dirname, './bower_components')));
@@ -20,4 +21,6 @@ app.get('*', function(req, res) {
 })
 
 // app.listen(8000, function() {});
-app.listen(process.env.PORT || 5000);
+app.listen(PORT, function () {
+	console.log("Express is running on port " + PORT);
+});
