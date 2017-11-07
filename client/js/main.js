@@ -164,6 +164,11 @@ app.config(function ($routeProvider, $locationProvider) {
 			controller: 'AppController'
 		})
 
+		.when('/reactTimerApp', {
+			templateUrl: 'partials/reactTimerApp.html',
+			controller: 'AppController'
+		})
+
 		.otherwise({
 			redirectTo: '/'
 		});
