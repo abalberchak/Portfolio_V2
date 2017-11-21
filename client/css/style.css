@@ -672,6 +672,20 @@ a {
 	transform: scale(1.1);
 }
 
+.reactTodoApp {
+	background: url('../img/react_todo_app.png') no-repeat center;
+	background-size: cover;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-bottom: 10px;
+}
+
+.reactTodoApp:hover {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
 
 
 .upcoming {

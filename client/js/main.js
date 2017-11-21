@@ -169,6 +169,11 @@ app.config(function ($routeProvider, $locationProvider) {
 			controller: 'AppController'
 		})
 
+		.when('/reactTodoApp', {
+			templateUrl: 'partials/reactTodoApp.html',
+			controller: 'AppController'
+		})
+
 		.otherwise({
 			redirectTo: '/'
 		});
